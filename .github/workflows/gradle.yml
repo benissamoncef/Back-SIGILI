@@ -44,6 +44,9 @@ jobs:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
+      - name: Print Docker Hub Token
+        run: echo ${{ secrets.DOCKER_PASSWORD }}
+
       - name: Print Docker Compose logs
         run: docker-compose -f docker-compose.yml logs
 
