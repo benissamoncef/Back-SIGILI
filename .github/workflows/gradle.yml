@@ -39,6 +39,11 @@ jobs:
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+      - name: List Docker images
+        run: docker images
+
+      - name: List Docker containers
+        run: docker ps -a
 
   dependency-submission:
 
