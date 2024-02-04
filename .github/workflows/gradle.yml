@@ -37,12 +37,12 @@ jobs:
       - name: Tag Docker image
         run: docker tag back-sigili_spring-app:latest moncefbenissa/back-sigili_spring-app:latest
 
-      - name: Push Docker image to Docker Hub
-        run: docker push moncefbenissa/back-sigili_spring-app:latest
-        env:
-          DOCKER_BUILDKIT: 1
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+     # - name: Push Docker image to Docker Hub
+      #  run: docker push moncefbenissa/back-sigili_spring-app:latest
+       # env:
+        #  DOCKER_BUILDKIT: 1
+         # DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          #DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Print Docker Hub Token
         run: echo ${{ secrets.DOCKER_PASSWORD }}
