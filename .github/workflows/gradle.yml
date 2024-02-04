@@ -37,7 +37,6 @@ jobs:
       - name: Push Docker image to Docker Hub
         run: docker-compose -f docker-compose.yml push
         env:
-          DOCKER_BUILDKIT: 1
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
